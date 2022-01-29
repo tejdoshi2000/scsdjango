@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100;400;500&display=swap');
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  /* box-sizing: border-box; */
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}/* Flipping cards */
+/* Additions */
+.services{
+    background-color: white;
+}
+.flip-card {
+    background-color: transparent;
+    width: 40rem;
+    height: 25rem;
+    perspective: 1000px;
+    margin: 3% auto;
+    padding: 20px;
+
+  }
+  .services{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+
+}
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* text-align: center; */
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card:hover .flip-card-back{
+      border-radius: 12px;
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-card-back h1{
+      text-align: center;
+      margin: 10px;
+  }
+
+  .flip-card-front {
+    background-color:  #bbb;
+    color: black;
+  }
+  .flip-card-front h1{
+      text-align: center;
+      color: black;
+      margin: 0.6rem;
+      font-weight: 700;
+  }
+
+  .flip-card-back {
+    background-color: #c2cde9;
+    /* color: white; */
+    transform: rotateY(180deg);
+
+  }
+  .flip-card-back li{
+      color: black;
+      font-size: 1.1rem;
+  }
+  .flip-card-back ul li{
+      padding: 0.1rem
+  }
+  .flip-card-back h1{
+      color: #121d5c;
+      font-weight: 700;
+  }
+  /* Trying */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 0;
+    z-index: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+li {
+    /* list-style: none; */
+}
+
+a {
+    text-decoration: none;
+}
+.header{
+
+    background-color: white;
+    height: 8rem ;
+    justify-content: center;
+    align-items: center;
+
+}
+.Navstyle{
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    height: 8rem;
+
+
+}
+.navbar ul{
+    text-decoration: none;
+    padding-bottom: 0;
+    align-items: center;
+    /* padding-top: 1rem; */
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #263170;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.nav-item {
+    margin-left: 5rem;
+    height: 100%;
+
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #263170 ;
+    padding: 1.9rem 1rem;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo{
+    width: 7em;
+    height: 7em;
+
+}
+.nav-logo img{
+    height: 7em;
+    width: 7em;
+    padding-top: 6px;
+    /* position: fixed; */
+}
+.nav-logo:hover{
+    background-color: white;
+}
+.nav-item :hover{
+    background-color: white;
+
+}
+.nav-item:hover .nav-link{
+    color: #4267b2;
+}
+.heading{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: block;
+        margin: 0;
+        line-height: 1em;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 4rem;
+        background: linear-gradient(to right, #263170 50%, #263170 20%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 0.5rem;
+        letter-spacing: 1px;
+        padding-top: 4rem;
+}
+@media only screen and (max-width: 768px){
+    .header{
+        height: 8rem;
+        justify-content: center;
+        align-items: center;
+        /* position: sticky; */
+    }
+    .nav-logo{
+        height: 100%;
+        padding: 0;
+    }
+    .nav-logo img{
+        height: 7em;
+        width: 7em;
+        padding-bottom: 2px;
+
+    }
+    .navbar{
+        height: 4.5rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4.55rem;
+        flex-direction: column;
+        background-color:white;
+        width: 100%;
+        /* border-radius: 10px; */
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+            margin-top: 0;
+            border-top: 2px solid white;
+    }
+
+
+    .flip-card {
+        background-color: transparent;
+        width: 35rem;
+        height: 25rem;
+        perspective: 1000px;
+        margin: 5% auto;
+      }
+
+
+  .flip-card-front h1{
+    text-align: center;
+    color: black;
+
+}
+    .nav-menu.active {
+        left: 0;
+    }
+
+
+    .nav-item {
+        margin: 1.6rem 0;
+        /* margin-inline: 100px; */
+        /* width: 100%; */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-top: 0;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /* Service cards */
+    .services{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    /* Heading */
+    .heading{
+
+        display: block;
+            margin: 0;
+            line-height: 1em;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 3rem;
+            background: linear-gradient(to right, #263170 50%, #263170 20%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            justify-content: center;
+            align-items:center;
+            text-align:center;
+            padding: 1.5rem;
+    }
+    .main1{
+        text-align: center;
+        font-size: 2rem;
+    }
+        .nav-lin h1{
+        align-items: center;
+        justify-content: center;
+    }
+    /*  About US */
+
+}
+/* Intro */
+.intro{
+    background-color: white;
+    height: 90vh;
+    margin-top: 0;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+
+}
+.intro main h1{
+    justify-content: center;
+    align-items: center;
+
+
+}
+/* Services */
+.strip{
+
+    height: 7rem;
+    background-color: rgb(194, 191, 191);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+.main1{
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    padding: 2rem;
+    font-weight: bold;
+
+
+}
+.services
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+/* ABOUT US SECTION */
+.whyus{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.whyus p{
+    font-size: 2rem;
+}
+.whyus h3{
+    font-weight: 800;
+    font-size: 3vh;
+}
+
+
+.seperate{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    /* background-image: url("bg111.jpg"); */
+    background-color: white;
+    background-position:center;
+    background-size: cover;
+    font-weight: 400;
+    color: black;
+
+}
+
+.about{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-image: url("http://woodpeckerframes.com/wp-content/uploads/2018/06/contact_banner.jpg");
+    background-position: center;
+    background-size: cover;
+    font-weight: 400;
+    color: white;
+
+
+}
+.seperate div{
+    padding: 1.5rem;
+}
+.seperate h1{
+    text-align: center;
+
+    padding-top: 1rem;
+    font-size: 4rem;
+}
+.about div{
+    padding: 2.1rem;
+}
+.about h1{
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 1rem;
+    font-size: 4rem;
+}
+
+@media only screen and (max-width: 768px){
+    .whyus{
+        flex-direction: column;
+    }
+
+    .about{
+        width: 100%;
+        padding: 1rem 0;
+
+    }
+    .seperate{
+        width: 100%;
+        padding: 1rem 0;
+        /* margin-top: 5rem; */
+    }
+    .seperate div{
+        padding: 1rem;
+    }
+    /* NEW MODIFICATIONS */
+
+    .aboutus{
+        text-align: center;
+        padding-top: 1rem;
+        /* border-top: black dotted; */
+        font-size: 1px;
+    }
+    .intro{
+        height: 105vh;
+    }
+}
+@media only screen and (max-width: 520px){
+    .about{
+        height: 100%;
+    }
+    .seperate div{
+        /* padding: 2rem; */
+    }
+    .seperate{
+        /* padding: 1rem; */
+        height: 100%;
+        width: 100%;
+    }
+
+    /* NEW MODIFICATIONS */
+
+
+    .aboutus p{
+        padding: 1rem;
+    }
+    /* NEW MODIFICATIONS */
+
+}
+@media only screen and (max-width:1326px) {
+    .seperate{
+        padding: 2.3rem;
+    }
+}
+footer{
+    font-size: 1.5rem;
+}
+
+/* NEW MODIFICATIONS */
+
+.aboutus{
+    text-align: center;
+    padding-top: 3rem;
+    /* border-top: black dotted; */
+    font-size: 2.5vh;
+}
+.aboutus p{
+    padding: 2rem 12rem;
+}
+@media only  screen and (max-width:768px) {
+ .aboutus{
+     font-size: 3vh;
+     padding-top: 1rem;
+
+    }
+
+.aboutus p{
+    padding: 2rem 0rem;
+}
+}
+
+/* @media only screen and (max-width: 876px){
+    .intro{
+        height: 125vh;
+    }
+} */
+@media only screen and (max-width: 520px){
+    .intro{
+        height: 125vh;
+    }
+    .aboutus p{
+        padding: 2rem 2rem;
+    }
+}
+/* Final Edits */
+.intro .vision p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5vh;
+
+}
+.vision{
+    margin-bottom: 25px;
+}
+.intro .mission p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5vh;
+
+}
+.intro .mission h2{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 4vh;
+    color: #263170;
+}
+.intro .vision h2{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 4vh;
+    color: #263170;
+}
+@media only screen and (min-width: 200px){
+    .intro{
+        height: 270vh ;
+    }
+}
+@media only screen and (min-width: 300px){
+    .intro{
+        height: 271vh;
+    }
+}
+@media only screen and (min-width: 360px){
+    .intro{
+        height: 219vh;
+    }
+}
+@media only screen and (min-width: 400px){
+    .intro{
+        height: 200vh;
+    }
+}
+@media only screen and (min-width: 480px){
+    .intro{
+        height: 160vh;
+    }
+}
+@media only screen and (min-width: 538px){
+    .intro{
+        height: 135vh;
+    }
+}
+@media only screen and (min-width: 732px){
+    .intro{
+        height: 125vh;
+    }
+}
+@media only screen and (min-width: 828px){
+    .intro{
+        height: 125vh;
+    }
+}
+@media only screen and (min-width: 1000px){
+    .intro{
+    background-color: white;
+    height: 125vh;
+    margin-top: 0;
+    background-image: url('2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    }
+}
+
+.qualities h3{
+    text-align: center;
+    color: #121d5c;
+    font-size: 4vh;
+    font-weight: bold;
+}
+.values h3{
+    text-align: center;
+    color: #121d5c;
+    font-size: 4vh;
+    font-weight: bold;
+
+}
+.values{
+    margin-bottom: 25px;
+
+}
+.qualities{
+    margin-top: 20px;
+}
+.qualities p{
+    text-align: center;
+    font-size: 2.5vh;
+}
+.values p{
+    text-align: center;
+    font-size: 2.5vh;
+}
+.whyush1 h1{
+    background-color: rgb(194, 191, 191);
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-weight: 900;
+    padding: 2rem;
+    color: black;
+}
+.foot1{
+    align-items: center;
+    justify-content: center;
+}
+/* Smooth Scrolling */
+#scroll {
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:40px;
+    height:40px;
+    background-color:#263170;
+    text-indent:-9999px;
+    display:none;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px;
+    z-index: 10;
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff;
+}
+#scroll:hover {
+    background-color:grey;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}
